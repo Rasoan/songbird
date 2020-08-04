@@ -1,0 +1,33 @@
+.switchCategory {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switchCategory-item {
+  margin: 20px 10px;
+}
+
+.switchCategory-button {
+  padding: 5px 15px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {background-color: #3e8e41}
+
+  &:active {
+    background-color: #3e8e41;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+  }
+}

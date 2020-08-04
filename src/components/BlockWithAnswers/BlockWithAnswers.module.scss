@@ -1,0 +1,35 @@
+.blockWithAnswers {
+  width: 500px;
+}
+
+.blockWithAnswers__list {
+  list-style: none;
+}
+
+.blockWithAnswers__button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: #303030;
+  color: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 20px;
+    margin: auto 0;
+    width: 10px;
+    height: 10px;
+    background-color: #b8d688;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    background-color: #201f1f;
+    cursor: pointer;
+  }
+}
+
