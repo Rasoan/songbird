@@ -1,19 +1,20 @@
 import {
   INCREMENT,
-  DECREMENT,
-  ASYNC_INCREMENT
+  DECREMENT
 } from '../types/action-types';
 
-export const increment = (state) => ({
-  type: INCREMENT
-});
+export default function increment() {
+  return {
+   type: INCREMENT
+  }
+};
 
 export const decrement = (state) => ({
   type: DECREMENT
 });
 
-export function asyncIncrement() {
+export default function asyncIncrement() {
   return function(dispatch) {
-    dispatch({ type: ASYNC_INCREMENT })
+   setTimeout( () => { dispatch(increment()) }, 1500 )
   }
 }

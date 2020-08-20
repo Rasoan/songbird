@@ -4,6 +4,8 @@ import Header from '../Header'
 import BlockWithQuestion from '../BlockWithQuestion';
 import BlockWithAnswers from '../BlockWithAnswers';
 import BlockWithAnswerDescriptions from '../BlockWithAnswerDescriptions';
+import { increment, asyncIncrement } from '../../redux/actions/creators/app-state.js';
+
 
 
 
@@ -35,7 +37,7 @@ const App = () => {
         audioTrackExample={audioTrackExampleDescriptions} 
         descriptionSelectedObject={descriptionSelectedObject}/>
       </div>
-      <button onClick={ () => { window.store.dispatch( {type: 'ASYNC_INCREMENT'} ) } } className={style.app__buttonNext}>Next level</button>
+      <button onClick={ () => { window.store.dispatch( asyncIncrement() ) } } className={style.app__buttonNext}>Next level</button>
     </div>
   );
 }
