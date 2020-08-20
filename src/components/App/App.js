@@ -5,6 +5,8 @@ import BlockWithQuestion from '../BlockWithQuestion';
 import BlockWithAnswers from '../BlockWithAnswers';
 import BlockWithAnswerDescriptions from '../BlockWithAnswerDescriptions';
 
+
+
 const App = () => {
 // вопрос
   let pathToPictureQuestion = 'https://birds-quiz.netlify.app/static/media/bird.06a46938.jpg';
@@ -33,7 +35,7 @@ const App = () => {
         audioTrackExample={audioTrackExampleDescriptions} 
         descriptionSelectedObject={descriptionSelectedObject}/>
       </div>
-      <button className={style.app__buttonNext}>Next level</button>
+      <button onClick={ () => { window.store.dispatch( {type: 'ASYNC_INCREMENT'} ) } } className={style.app__buttonNext}>Next level</button>
     </div>
   );
 }

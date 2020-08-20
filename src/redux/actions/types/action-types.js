@@ -1,1 +1,3 @@
-export const SET_USER_DATA = 'INCREASE_THE_NUMBER_OF_POINTS';
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const ASYNC_INCREMENT = 'ASYNC_INCREMENT';

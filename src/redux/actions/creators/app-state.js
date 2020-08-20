@@ -1,32 +1,19 @@
 import {
-  GET_GAME_MODE_STATE,
-  SET_GAME_MODE,
-  SET_GAME_NAME,
-  SET_GAME_WORDS,
-  SET_RANDOM_WORDS,
+  INCREMENT,
+  DECREMENT,
+  ASYNC_INCREMENT
 } from '../types/action-types';
 
-export const setGameMode = (state) => ({
-  type: SET_GAME_MODE,
-  payload: state,
+export const increment = (state) => ({
+  type: INCREMENT
 });
 
-export const setGameName = (state) => ({
-  type: SET_GAME_NAME,
-  payload: state,
+export const decrement = (state) => ({
+  type: DECREMENT
 });
 
-export const setGameWords = (state) => ({
-  type: SET_GAME_WORDS,
-  payload: state,
-});
-
-export const getGameModeState = (state) => ({
-  type: GET_GAME_MODE_STATE,
-  payload: state,
-});
-
-export const setRandomWords = (state) => ({
-  type: SET_RANDOM_WORDS,
-  payload: state,
-});
+export function asyncIncrement() {
+  return function(dispatch) {
+    dispatch({ type: ASYNC_INCREMENT })
+  }
+}
