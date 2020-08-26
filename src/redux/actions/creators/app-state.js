@@ -3,18 +3,14 @@ import {
   DECREMENT
 } from '../types/action-types';
 
-export default function increment() {
+export function increment() {
   return {
    type: INCREMENT
   }
 };
 
-export const decrement = (state) => ({
-  type: DECREMENT
-});
-
-export default function asyncIncrement() {
+export function asyncIncrement() {
   return function(dispatch) {
-   setTimeout( () => { dispatch(increment()) }, 1500 )
+   setTimeout( () => { dispatch(increment()); console.log('ok!')}, 1500 )
   }
 }
